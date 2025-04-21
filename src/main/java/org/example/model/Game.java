@@ -45,4 +45,9 @@ public class Game {
     public void scoreAway() {
         this.awayScore++;
     }
+
+    @Override
+    public String toString() {
+        return home + " " + homeScore + " - " + awayScore + " " + away;
+    }
 }
