@@ -24,4 +24,13 @@ public class Board implements Storage {
         games.sort(new GameComparator());
         return games;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+        for (Game game : summary()) {
+            result.append(game.toString()).append("\n");
+        }
+        return result.toString();
+    }
 }

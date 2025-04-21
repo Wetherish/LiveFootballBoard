@@ -37,5 +37,11 @@ public class GameTest {
         assertEquals(11, game.getHomeScore());
         assertEquals(11, game.getAwayScore());
     }
-  
+
+    @Test
+    public void GameToString() {
+        Game game = new Game("Chelsea", "Manchester United");
+        assertEquals("Chelsea 0 - 0 Manchester United", game.toString());
+    }
+
 }

@@ -54,7 +54,7 @@ public class BoardTest {
     }
 
     @Test
-    public void DynamicSummaryChanges() {
+    public void dynamicSummaryChanges() {
         Storage board = PrepareBoard();
 
         assertEquals("Uruguay", board.summary().get(0).getHomeName());
@@ -62,6 +62,17 @@ public class BoardTest {
         board.summary().get(1).scoreAway();
         assertEquals("Uruguay", board.summary().get(1).getHomeName());
         assertEquals("Spain", board.summary().get(0).getHomeName());
+    }
+
+    @Test
+    public void boardToString() {
+        Storage board = PrepareBoard();
+        assertEquals(
+                        "Uruguay 6 - 6 Italy\n" +
+                        "Spain 10 - 2 Brazil\n" +
+                        "Mexico 0 - 5 Canada\n" +
+                        "Argentina 3 - 1 Australia\n" +
+                        "Germany 2 - 2 France\n", board.toString());
     }
 
     private void setScore(int score, Runnable scoreSetter) {
