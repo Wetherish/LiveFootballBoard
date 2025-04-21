@@ -22,6 +22,7 @@ public class GameTest {
 
     @Test
     public void ScoreGoal() {
+
         Game game = new Game("Mexico", "Canada");
         game.scoreHome();
         game.scoreAway();
@@ -36,5 +37,5 @@ public class GameTest {
         assertEquals(11, game.getHomeScore());
         assertEquals(11, game.getAwayScore());
     }
-
+  
 }

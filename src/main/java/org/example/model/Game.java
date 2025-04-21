@@ -7,6 +7,7 @@ public class Game {
     private final String away;
     private int homeScore;
     private int awayScore;
+
     private final LocalTime startTime;
 
     public Game(String home, String away) {
