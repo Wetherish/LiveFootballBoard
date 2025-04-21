@@ -5,9 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
 public class GameTest {
-
     @Test
     public void NewGame() {
         Game game = new Game("Chelsea", "Manchester United");
@@ -23,7 +21,8 @@ public class GameTest {
     }
 
     @Test
-    public void ScoreGoal(){
+    public void ScoreGoal() {
+
         Game game = new Game("Mexico", "Canada");
         game.scoreHome();
         game.scoreAway();
@@ -31,12 +30,12 @@ public class GameTest {
         assertEquals(1, game.getHomeScore());
         assertEquals(1, game.getAwayScore());
 
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 10; i++) {
             game.scoreHome();
             game.scoreAway();
         }
         assertEquals(11, game.getHomeScore());
         assertEquals(11, game.getAwayScore());
     }
-
+  
 }
